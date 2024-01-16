@@ -23,7 +23,7 @@ def parse_args():
 
 def parse_basic_args():
     parser = argparse.ArgumentParser(description="Run GAT.")
-    parser.add_argument('--data', type=str, default="Taiwan_model_data_10_best.pickle",
+    parser.add_argument('--data', type=str, default="data/kc/kc_model_data.pickle",
                         help='Data path.')
     parser.add_argument('--model', type=str, default="CAT",
                         help='Model for training, choose from [CG ,CAT,CPool].')
@@ -51,6 +51,7 @@ def parse_basic_args():
                         help='Number of weeks')
     parser.add_argument('--weight', type=float, default=0.5,
                         help='Classification threshold')
+    parser.add_argument('--log', type=str, default='default')
     return parser.parse_args()
 
 
